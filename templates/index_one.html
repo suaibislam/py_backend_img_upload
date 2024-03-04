@@ -1,0 +1,20 @@
+<label for="iNoteBook">iNoteBook</label><br><br>
+
+<form method="POST" action="/insert">
+        {% csrf_token %}
+        <textarea name="text" rows="5" cols="50" ></textarea><br>
+        <input type = "submit" />
+
+</form>  
+{% for d in data %}
+
+<h1> ID- {{d.id}}</h1>
+<h1> {{d.name}}</h1>
+<a type="button" href="/update/{{d.id}}">Edit</a>
+<a type="button" href="/delete/{{d.id}}">Delete</a>
+<p> {{d.datetime}}</p>
+
+
+{% endfor %}
+
+

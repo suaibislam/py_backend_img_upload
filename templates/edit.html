@@ -1,0 +1,8 @@
+<form action="/update/{{d.id}}" method="POST">
+    
+         {% csrf_token %}
+         <div>
+                <textarea name="text" rows="5" cols="50" >{{d.name}}</textarea><br>
+         </div>
+         <button type="submit">Update</button>
+</form>
